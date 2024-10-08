@@ -29,13 +29,13 @@ public class itdCameraPipeline extends OpenCvPipeline {
     //Creating enum's to pull from later for various functions
     }
 
-    private Mat farLeftMat = new Mat();
-    private Mat middleLeftMat = new Mat();
-    private Mat nearLeftMat = new Mat();
-    private Mat centerMat = new Mat();
-    private Mat nearRightMat = new Mat();
-    private Mat middleRightMat = new Mat();
-    private Mat farRightMat = new Mat();
+    Mat farLeftMat = new Mat();
+    Mat middleLeftMat = new Mat();
+    Mat nearLeftMat = new Mat();
+    Mat centerMat = new Mat();
+    Mat nearRightMat = new Mat();
+    Mat middleRightMat = new Mat();
+    Mat farRightMat = new Mat();
     //Individual matrices to detect how far left/right on the camera the sample is,
     // and by proxy what angle we need to turn the robot to face the sample head on.
 
@@ -63,13 +63,15 @@ public class itdCameraPipeline extends OpenCvPipeline {
     }
     // Creating bars to locate sample positions
 
-    private Mat aMat = new Mat();
-    private Mat bMat = new Mat();
-    private Mat cMat = new Mat();
-    private Mat dMat = new Mat();
-    private Mat eMat = new Mat();
-    private Mat fMat = new Mat();
-    private Mat gMat = new Mat();
+    Mat aMat = new Mat();
+    Mat bMat = new Mat();
+    Mat cMat = new Mat();
+    Mat dMat = new Mat();
+    Mat eMat = new Mat();
+    Mat fMat = new Mat();
+    Mat gMat = new Mat();
+
+
     //Individual matrices to detect how high on the camera the sample is,
     // and by proxy how far ahead of the robot it is.
     private double aAvg, bAvg, cAvg, dAvg, eAvg, fAvg, gAvg;
@@ -83,6 +85,7 @@ public class itdCameraPipeline extends OpenCvPipeline {
     private final Rect fRect = new Rect(0,514,1280,103);
     private final Rect gRect = new Rect(0,617,1280,103);
 
+    
     @Override
     public Mat processFrame(Mat input) {
 

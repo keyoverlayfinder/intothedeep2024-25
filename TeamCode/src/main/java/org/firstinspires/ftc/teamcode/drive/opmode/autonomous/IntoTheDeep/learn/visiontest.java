@@ -64,7 +64,7 @@ public class visiontest extends LinearOpMode {
             telemetry.update();
         }
 
-        // Stop the camera when the opMode is finished
+        // Stop the camera when the opMode is finishe
         webcam1.stopStreaming();
     }
 }
